@@ -12,34 +12,19 @@ ocorrer quando foram atendidos todos os clientes que conseguiram fazer pedidos n
 Nem todos os clientes precisam pedir uma bebida a cada rodada. A simulação acaba quando o número
 de rodadas R é atingido.
 
-Construção da Solução
-Implemente uma solução que permita a passagem por parâmetro para o programa: (i) o número de
+
+O código permite a passagem por parâmetro para o programa: (i) o número de
 clientes presentes no estabelecimento (N); (ii) o número de garçons que estão trabalhando (G); (iii) a
 capacidade de atendimento dos garçons (Gn); (iv) o número de rodadas grátis que serão liberadas no
 bar (R); (v) tempo máximo (em milissegundos) que um cliente pode ficar conversando antes de fazer
 um novo pedido; (vi) tempo máximo (em milissegundos) que um cliente fica consumindo a bebida.
-O programa deverá receber, obrigatoriamente, os parâmetros nessa ordem via linha de comando:
+
+
+O programa recebe os parâmetros nessa ordem via linha de comando:
 ./programa <clientes> <garcons> <clientes/garcon> <rodadas> <max.conversa> <max.consumo>
-Cada garçom e cada cliente devem ser representados por threads, estruturalmente definidas conforme
-os pseudocódigos a seguir:
-thread cliente {
-while (!fechouBar){
-conversaComAmigos(); //tempo variável
-fazPedido();
-esperaPedido();
-recebePedido();
-consomePedido(); //tempo variável
-}
-}
-thread garçom {
-while(!fechouBar) {
-recebeMaximoPedidos();
-registraPedidos();
-entregaPedidos();
-rodada++; //serve como parâmetro para
-// fechar o bar
-}
-}
+
+
+Cada garçom e cada cliente é representado por threads.
 
 
 As seguintes regras devem ser respeitadas:
