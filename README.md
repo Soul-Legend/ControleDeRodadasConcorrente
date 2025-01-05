@@ -6,11 +6,11 @@ O código permite a passagem por parâmetro para o programa: (i) o número de cl
 ## O programa recebe os parâmetros nessa ordem via linha de comando:
 ./programa <clientes/garcon> <max.conversa> <max.consumo>
 
-Cada garçom e cada cliente é representado por threads.
-
 ## As seguintes regras devem ser respeitadas:
 • Os pedidos dos clientes são atendidos pelos garçons em ordem de chegada na fila de pedidos de cada garçom (a solução não deve permitir que clientes furem essa fila);
 
 • O garçom só pode ir para a copa quando tiver recebido seus Gn pedidos;
 
 • O programa deve mostrar a evolução da simulação, portanto planeje bem o que será apresentado. Deve ficar claro o que está acontecendo no bar a cada rodada. Os pedidos dos clientes, os atendimentos pelos garçons, os deslocamentos para o pedido, a garantia de ordem de atendimento, etc.
+
+• Cada garçom e cada cliente é representado por threads.
